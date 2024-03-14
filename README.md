@@ -1,6 +1,7 @@
 ## About
 
 ---
+
 - This was made for my web dev internals.
 
 - This is a frontend for a pet adoption centre made using HTML, CSS and JS.
@@ -10,6 +11,8 @@
 - FLuid button hover effects are added.
 
 - The entire page follows a white and taupe color theme.
+
+- The files can be hosted locally using XAMMP (preferred) or WAMP. Refer the `send.php` for login credentials for the backend.
 
 ## More
 
