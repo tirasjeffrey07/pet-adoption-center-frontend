@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="twoStyles.css" />
+    <script src="script.js" defer></script>
+    <script src="validate.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>Tiras Jeffrey 2162245</p>
+      <a href="index.html"><div class="header_button">Home</div></a>
+    </header>
+
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Sign In</h1>
+    <h1 style="font-size: 1rem;">New user? <a id="customlink" href="register.html">Register</a></h1>
+    <p>Please enter your login credentials</p>
+
+    <form name="loginform" id="form2" action="" method="post">
+      <!--3 distinct sections so three fieldset elements -->
+
+      <fieldset>
+        <label for="username">Username</label>
+        <input class="textfield_ip" name="un-ip" type="text" id="username" />
+        <br />
+        <label for="email">Email </label>
+        <input class="textfield_ip" name="email-ip" type="text" id="email" />
+        <br />
+        <label for="login-password">Password</label>
+        <input
+          class="textfield_ip"
+          name="login-password"
+          type="password"
+          id="login-password"
+        />
+        <br />
+      </fieldset>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <footer>
+      <a href=""><div style="margin-left: 100px" class="footer_button">Facebook</div></a>
+      <a href=""><div class="footer_button">Instagram</div></a>
+      <a href=""><div class="footer_button">LinkedIn</div></a>
+      <a href=""><div class="footer_button">Twitter</div></a>
+      <a href=""><div class="footer_button">PETA</div></a>
+      <a href=""><div class="footer_button">YouTube</div></a>
+    </footer>
+  </body>
+</html>

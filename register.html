@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Registration</title>
+        <link rel="stylesheet" href="twoStyles.css"/>
+        <script src="script.js" defer></script>
+        <script src="validate.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <p>Tiras Jeffrey 2162245</p>
+            <a href="index.html"><div class="header_button">Home</div></a>
+        </header>
+
+        <h1 style="font-size:2.5rem; margin-bottom: 1rem;">Register Below !</h1>
+        <h1 style="font-size: 1rem;">Already a user? <a id="customlink" href="signin.html">Sign In</a></h1>
+        <p>Please enter the registration information </p>
+
+        <form name="registerform" id="form" action="send.php" method="POST">            
+            <!--3 distinct sections so three fieldset elements -->
+            
+            <fieldset>
+                <!-- if type is not set for an input element itll be defaulted to text by the browser -->
+                <label for="fn">First Name </label><input class="textfield_ip" name="firstname" type="text" id="fn"/>
+                <br>
+                <label for="ln">Last Name </label><input class="textfield_ip" name="lastname"  type="text" id="ln"/>
+                <br>
+                <div class="input-control">
+                    <label for="username">Username</label>
+                    <input class="textfield_ip" name="username" type="text" id="username"/>
+                    <div class="error"></div>
+                </div>
+                <br>
+                <div class="input-control">
+                    <label for="email">Email </label>
+                    <input class="textfield_ip" name="email" type="text" id="email"/>
+                    <div class="error"></div>
+                </div>
+                <br>
+                <div class="input-control">
+                    <label for="password">New Password</label>
+                    <input class="textfield_ip" name="password" type="password" id="password"/>
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password2">Confirm Password</label>
+                    <input class="textfield_ip" name="password2"  type="password" id="password2"/>
+                    <div class="error"></div>
+                </div>
+    
+                <!-- pattern="[a-z0-5]{8,}" means the pw must contain lowercase letters + 0-5 and a minlength of 8 --> 
+                <br>
+            </fieldset>
+            <br>
+            
+            <!-- giving same name to inputs (type=radio) actually makes them radiobutton-->
+            <!-- 
+                    <fieldset>    
+                        <label for="pa"><input class="inline" id="pa" name="account-type" type="radio"/> Personal Account</label>
+                        <label for="ba"><input class="inline" id="ba" name="account-type" type="radio"/> Business Account</label>
+                    </fieldset>
+                    <br>
+            -->
+
+            
+            <fieldset>
+
+                <label for="age">Age <input class="textfield_ip" name="age" id="age" type="number" min="13" max="120"/></label> <!-- min/max indicates min/max value itself not length unlike minlength -->
+                <!-- select = dropdown menu. option=options of the dropdown menu, each acting as a label. -->
+                <br>
+
+                <label for="pfp">Upload profile picture (not mandatory) <input class="textfield_ip" name="pfp" style="font-size: 16px;" id="pfp" type="file"/></label>
+                <br>
+                
+                <label for="howhear">How did you hear about us?
+                    <select name="howhear" id="howhear">
+                        <!-- "value"s are sent to the url in action attribute of the form element,if values arent present for each option, the text will be sent which is undesirable -->
+                        <option value="">(select one)</option>
+                        <option value="1" name="friend">From a Friend</option>
+                        <option value="2" name="social">Social Media</option>
+                        <option value="3" name="customer">Fellow Customer</option>
+                        <option value="4" name="other">Other</option>
+                      </select>
+                </label>
+                <br>
+                <!-- 
+
+                    <label for="bio">Provide a bio:<textarea style="height: 150px;" name="ta-ip" id="bio" rows="3" cols="30" placeholder="Bio can be something about you!"></textarea></label>
+                    
+                -->
+            
+            </fieldset>
+            <fieldset>
+                <div style="text-align: center;">
+                    <label for="tnc"><input class="inline" name="tnc-ip" id="tnc" required type="checkbox"/> I Agree To The <a href="https://www.freecodecamp.org/news/terms-of-service/">Terms & Conditions</a></label>
+                </div>
+                
+            </fieldset>
+
+            <!-- when an input element's type is 'submit', it acts as the sutbmit button which is created automatically upon declaration-->
+
+            
+            <input type="submit" name="submit" value="Submit"/>
+        </form>        
+        <footer>
+            <a href=""><div style="margin-left: 100px;" class="footer_button">Facebook</div></a>
+            <a href=""><div class="footer_button">Instagram</div></a>
+            <a href=""><div class="footer_button">LinkedIn</div></a>
+            <a href=""><div class="footer_button">Twitter</div></a>
+            <a href=""><div class="footer_button">PETA</div></a>
+            <a href=""><div class="footer_button">YouTube</div></a>
+
+        </footer>
+    </body>
+</html>
